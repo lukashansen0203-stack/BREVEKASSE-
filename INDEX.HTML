@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+gap: 10px;
+max-width: 500px;
+}
+input, textarea {
+padding: 10px;
+font-size: 14px;
+}
+button.send {
+background: #ff4d6d;
+color: #fff;
+border: none;
+padding: 12px;
+cursor: pointer;
+font-size: 16px;
+}
+footer {
+text-align: center;
+padding: 15px;
+background: #111;
+color: #fff;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>UNGDOMSLIV</h1>
+<p>Et online magasin om unges liv, tanker og drømme</p>
+</header>
+
+
+<nav>
+<button class="tab active" onclick="showTab('start')">Start</button>
+<button class="tab" onclick="showTab('magasin')">Magasin</button>
+<button class="tab" onclick="showTab('kontakt')">Kontakt</button>
+</nav>
+
+
+<main>
+<section id="start" class="active">
+<h2>Velkommen</h2>
+<p>Ungdomsliv er et magasin skabt til og af unge. Her deler vi historier om venskab, kærlighed, skole, mental sundhed og alt det midt imellem.</p>
+</section>
+
+
+<section id="magasin">
+<h2>Seneste Artikler</h2>
+<div class="article">
+<h3>At være ung i 2026</h3>
+<p>Pres, sociale medier og store drømme – hvordan finder man balancen?</p>
+</div>
+<div class="article">
+<h3>Venskaber der holder</h3>
+<p>Hvad gør et venskab ægte, og hvordan passer man på det?</p>
+</div>
+</section>
+
+
+<section id="kontakt">
+<h2>Skriv til os</h2>
+<p>Har du en historie, et digt eller en mening? Send os en besked direkte på mail.</p>
+<form action="lukashansen0203@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="Navn" placeholder="Dit navn" required />
+<input type="email" name="Email" placeholder="Din email" required />
+<textarea name="Besked" rows="5" placeholder="Din besked" required></textarea>
+<button class="send" type="submit">Send</button>
+</form>
+<p><small>OBS: Husk at ændre email-adressen i koden.</small></p>
+</section>
+</main>
+
+
+<footer>
+<p>© 2026 Ungdomsliv Magasin</p>
+</footer>
+
+
+<script>
+function showTab(id) {
+document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
